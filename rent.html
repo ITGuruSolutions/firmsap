@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firmsaprentals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+    <style> 
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+
+    body {
+      background-color: #9a9ab6;
+      position: relative;
+    }
+    
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, #ff1, lightgreen);
+      clip-path: circle(40% at 110% 70%);
+    }
+    
+    body::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, lightgreen, #e91e63);
+      clip-path: circle(22% at 5% 40%);
+    }
+    
+    h2 {
+      color: #5cf161;
+      text-align: center;
+      font-size: 50px;
+      margin-top: 70px;
+    }
+    
+    form {
+        position: relative;
+        z-index: 100;
+      width: 500px;
+      margin: 70px auto 0;
+      text-align: left;
+    }
+    
+    label {
+      width: 150px;
+      display: inline-block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 300px;
+      height: 30px;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      border: 1px solid lightgray;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus,
+    select:focus,
+    textarea:focus {
+      border: 1px solid #4CAF50;
+      box-shadow: 0 0 10px #4CAF50;
+    }
+    
+    input[type="submit"] {
+      width: 100px;
+      height: 40px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+    
+    input[type="submit"]:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(5px);
+    }
+    </style>
+</head>
+<body>
+
+    <h2>Rent a Laptop</h2>
+    <div class="row">
+        <div class="col-12 d-flex m-3 justify-content-center">
+        <form  action="rent.php" method="POST" name="form">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email Id: </label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="phone">Mobile Number: </label>
+        <input type="text" id="phone" name="phone" required><br><br>
+        
+        <label for="company">Company (Optional):</label>
+        <input type="text" id="company" name="company"><br><br>
+        
+        <label for="address">Address: </label>
+        <input type="text" id="address" name="address" required><br><br>
+        
+        <label for="state">State: </label>
+        <input type="text" id="state" name="state" required><br><br>
+        
+        <label for="postal">Postal Code / ZIP: </label>
+        <input type="text" id="postal" name="postal" required><br><br>
+        
+        <label for="reference">Reference:</label>
+        <input type="text" id="reference" name="reference"><br><br>
+        
+        <label for="laptop_model">Laptop Model:</label>
+        <select id="laptop_model" name="laptop_model">
+          <option value="">--Select--</option>
+          <option value="Macbook Pro">Macbook Pro</option>
+          <option value="Lenovo Thinkpad">Lenovo Thinkpad</option>
+          <option value="Dell XPS">Dell XPS</option>
+        </select><br><br>
+        
+        <label for="processor">Processor:</label>
+        <select id="processor" name="processor">
+          <option value="">--Select--</option>
+          <option value="i3 5th to 12th Gen">i3 5th to 12th Gen</option>
+          <option value="i5 5th to 12th Gen">i5 5th to 12th Gen</option>
+          <option value="i7 5th to 12th Gen">i7 5th to 12th Gen</option>
+        </select><br><br>
+        
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date"><br><br>
+        
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date"><br><br>
+        
+        <input type="submit" value="Submit">
+      </form> 
+    </div>
+    </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" integrity="sha512-sH8JPhKJUeA9PWk3eOcOl8U+lfZTgtBXD41q6cO/slwxGHCxKcW45K4oPCUhHG7NMB4mbKEddVmPuTXtpbCbFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
